@@ -5,7 +5,9 @@
   "main": "build/Main.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,8 @@
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.0",
     "tone": "^0.8.0",
-    "webpack": "^1.12.14"
+    "webpack": "^1.12.14",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "css-loader": "^0.23.1",
@@ -35,5 +38,6 @@
   },
   "browser": {
     "fs": false
-  }
+  },
+  "snyk": true
 }
